@@ -1,0 +1,52 @@
+
+{% extends "aplicacionapp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <p>Estás buscando: <strong>{{query}}</strong></p>
+
+    {% if infor %}
+            <p>Bibliografías encontradas en el apartado de informática: {{infor|length}} bibliografías</p>
+
+            <ul>
+
+                {% for i in infor %}
+                <li>
+                    {{i.titulo}}:  &nbsp; <a href="{{i.link}}">{{i.link}}</a>  
+                </li>
+                {% endfor %}
+            </ul>
+
+    {% endif %}
+
+    {% if mates %}
+            <p>Bibliografías encontradas en el apartado de matemáticas: {{mates|length}} bibliografías</p>
+
+            <ul>
+
+                {% for i in mates %}
+                <li>
+                    {{i.titulo}}:  &nbsp; <a href="{{i.link}}">{{i.link}}</a>  
+                </li>
+                {% endfor %}
+            </ul>
+
+    {% endif %}
+
+    {% if electros %}
+            <p>Bibliografías encontradas en el apartado de electrónica: {{electros|length}} bibliografías</p>
+
+            <ul>
+
+                {% for i in electros %}
+                <li>
+                    {{i.titulo}}:  &nbsp; <a href="{{i.link}}">{{i.link}}</a>  
+                </li>
+                {% endfor %}
+            </ul>
+
+    {% endif %}
+
+{% endblock %}

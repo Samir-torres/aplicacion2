@@ -1,0 +1,18 @@
+
+{% extends "aplicacionapp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<p>Estás buscando: <strong>{{query}}</strong></p>
+
+
+
+<h3 align = "center">Lo sentimos, no encontramos información para lo que buscas. Intenta con otra palabra; recuerda cuidar los acentos y otras faltas de ortografía</h3>
+
+<div align = "center">
+<img src="{% static 'aplicacionapp/img/triste.jpg' %}" alt="">
+</div>
+
+{% endblock %}
